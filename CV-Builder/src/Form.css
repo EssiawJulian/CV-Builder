@@ -194,12 +194,16 @@
 }
 
 .delete-btn {
-  background: #ff2d2d;
+  background: #e21919;
   color: #fff;
   border: none;
   padding: 6px 12px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #c21414;
 }
 
 .exp-description {

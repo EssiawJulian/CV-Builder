@@ -28,6 +28,7 @@
   /* border: 1px solid red; */
   min-width: 320px;
   min-height: 100vh;
+  background-color: #60647033;
 }
 
 .aside {
@@ -38,7 +39,7 @@
   padding: 24px;
 }
 
-li {
+.aside > li {
   list-style-type: none;
 }
 
@@ -72,8 +73,8 @@ li {
 
 .resume-category > li:hover {
   background-color: var(--accent-color);
-  opacity: 1;
   transition: background-color 0.3s ease;
+  transform: scale(1.05);
 }
 
 .active {
@@ -85,4 +86,35 @@ li {
 .resume-category > li > img {
   width: 24px;
   height: 24px;
+}
+
+.downloadButton {
+  position: absolute;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+}
+
+.loadExampleButton {
+  background-color: orange;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 40px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 20px;
+  opacity: 0.7;
+  color: white;
+}
+
+.loadExampleButton:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }

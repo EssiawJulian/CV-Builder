@@ -1,0 +1,64 @@
+.resume-cnt {
+  /* A4 width and height in mm => set up for "print" or on-screen preview */
+  width: 210mm; /* A4 width */
+  max-height: 297mm; /* A4 height */
+  margin: 0 auto; /* center on page */
+  padding: 11mm 12mm;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  font-family: garamond, serif;
+  color: #000;
+  font-size: 11pt;
+}
+
+.resume-name {
+  font-size: 25.5pt;
+  text-align: center;
+}
+
+.resume-contact {
+  font-size: 10pt;
+  display: flex;
+  justify-content: center;
+}
+
+.edu-line,
+.exp-line,
+.proj-line {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.edu-right,
+.exp-date {
+  margin-left: auto; /* Keep the date text on the far right */
+  font: 11.5pt;
+  font-weight: normal;
+}
+
+.exp-date {
+  font-style: italic;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #000; /* Horizontal divider like in the PDF */
+}
+
+.section-header {
+  font-weight: bold;
+  font-size: 11pt;
+  text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.edu-degree {
+  font-style: italic;
+}
+
