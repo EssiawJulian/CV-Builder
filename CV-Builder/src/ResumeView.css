@@ -9,6 +9,7 @@
   font-family: garamond, serif;
   color: #000;
   font-size: 11pt;
+  overflow: hidden;
 }
 
 .resume-name {
@@ -55,10 +56,9 @@ hr {
   font-weight: bold;
   font-size: 11pt;
   text-transform: uppercase;
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .edu-degree {
   font-style: italic;
 }
-
