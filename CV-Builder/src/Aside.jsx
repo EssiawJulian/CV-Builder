@@ -1,13 +1,10 @@
-import { useState } from "react";
 import genIcon from "./assets/account.svg";
 import eduIcon from "./assets/school-outline.svg";
 import satIcon from "./assets/cog-outline.svg";
 import expIcon from "./assets/briefcase-outline.svg";
 import prjIcon from "./assets/lightbulb-on-outline.svg";
 
-function Aside() {
-  const [active, setActive] = useState("gen-info");
-
+function Aside({ active, setActive }) {
   const handleClick = (str) => {
     setActive(str);
   };
@@ -21,7 +18,7 @@ function Aside() {
           className={`gen-info + ${active === "gen-info" ? "active" : ""}`}
           onClick={() => handleClick("gen-info")}
         >
-          <img src={genIcon} alt="Account Icon" /> General Information
+          <img src={genIcon} alt="Account Icon" /> Personal Details
         </li>
 
         {/* Education List */}

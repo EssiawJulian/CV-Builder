@@ -70,6 +70,12 @@ li {
   cursor: pointer;
 }
 
+.resume-category > li:hover {
+  background-color: var(--accent-color);
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+
 .active {
   background-color: var(--accent-color);
   opacity: 1 !important;

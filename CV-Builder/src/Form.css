@@ -1,0 +1,207 @@
+.cv-info-cnt {
+  background-color: #f8f7f1;
+  padding: 48px 28px;
+}
+
+.cv-info-cnt > header {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #525256;
+  margin-bottom: 24px;
+}
+
+.cv-info-cnt > form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdfd;
+  padding-top: 20px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  width: 288px;
+  border-radius: 8px;
+  font-family: poppins;
+  gap: 10px;
+}
+
+.form-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-info-cnt > form > div > label {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Cascadia Code";
+  color: #656575;
+}
+
+.cv-info-cnt > form > div > input {
+  font-size: 13px;
+  font-family: "Cascadia Code";
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding-left: 12px;
+  background-color: white;
+}
+
+.cv-info-cnt > form > button {
+  background-color: #006aff;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: "Cascadia Code";
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.cv-info-cnt > form > button:hover {
+  background-color: #0050e6;
+}
+
+.tag {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tag > div {
+  color: #333;
+  background-color: #f0f0f0;
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 240px;
+  padding: 8px 10px;
+  border-radius: 20px;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: #f44336; /* Red color for delete icon */
+  font-size: 14px;
+  transition: color 0.3s ease;
+  margin-left: 5px;
+}
+
+.delete-icon:hover {
+  animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.skill-and-tech-add-button {
+  background-color: #25bd73;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: "Cascadia Code";
+  height: 40px;
+  border-radius: 0px 8px 8px 0px;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+}
+
+.skill-and-tech-add-button:hover {
+  background-color: #1f9e64;
+}
+
+#tech {
+  width: 100%;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.skill-and-tech-input-and-addButton-cnt {
+  display: flex;
+}
+
+.techForm {
+  margin-top: 24px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.exp-btn {
+  background-color: #1f9e64 !important;
+}
+
+.description-textarea {
+  max-width: 100%;
+  min-height: 160px;
+  padding: 10px;
+}
+
+.experience-list {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #fdfdfd;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.experience-list > h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #525256;
+  margin-bottom: 22px;
+}
+
+.experience-list > p {
+  font-family: "Inter", sans-serif;
+  color: #525256;
+}
+
+.experience-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  font-family: "Inter", sans-serif;
+  color: #525256;
+}
+
+.experience-item > p {
+  font-size: 13px;
+}
+
+.experience-item > p > strong {
+  font-size: 15px;
+}
+
+.exp-top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exp-top-line > h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: #ff2d2d;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exp-description {
+  margin-top: 8px;
+}
