@@ -3,7 +3,7 @@ import { Aside } from "./Aside";
 import { Form } from "./Form";
 import "./ResumeView.css";
 import { ResumeView } from "./ResumeView";
-import { ResumeDownload } from "./downloadButton";
+import { ResumeDownload } from "./DownloadButton";
 
 // App component
 // This component is the parent component that renders the entire application
