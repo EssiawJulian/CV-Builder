@@ -1,6 +1,11 @@
 import { useState } from "react";
 import "./Form.css";
 
+// Function to handle next button navigation
+const nextButton = (str) => {
+  return document.querySelector(str).click();
+};
+
 // Group all necessary rendering into one component
 function Form({ active, resumeInfo, setResumeInfo }) {
   const map = new Map();
@@ -17,12 +22,7 @@ function Form({ active, resumeInfo, setResumeInfo }) {
   let buttonText = "Next >>";
 
   let formContent;
-  let techForm = (
-    <form onSubmit={handleSubmit} className="techForm">
-      <Tech resumeInfo={resumeInfo} setResumeInfo={setResumeInfo} />
-      <button type="submit">{buttonText}</button>
-    </form>
-  );
+  let handleButtonClick;
 
   switch (active) {
     case "gen-info":
@@ -32,30 +32,45 @@ function Form({ active, resumeInfo, setResumeInfo }) {
           setResumeInfo={setResumeInfo}
         />
       );
+      handleButtonClick = () => nextButton(".edu");
       break;
     case "edu":
       formContent = (
         <EducationInfo resumeInfo={resumeInfo} setResumeInfo={setResumeInfo} />
       );
+      handleButtonClick = () => nextButton(".skills-and-tech");
+
       break;
     case "s&t":
       formContent = (
         <Language resumeInfo={resumeInfo} setResumeInfo={setResumeInfo} />
       );
+      handleButtonClick = () => nextButton(".experience");
       break;
     case "experience":
       formContent = (
         <Experience resumeInfo={resumeInfo} setResumeInfo={setResumeInfo} />
       );
+      handleButtonClick = () => nextButton(".projects");
       break;
     case "projects":
       formContent = (
         <Project resumeInfo={resumeInfo} setResumeInfo={setResumeInfo} />
       );
+      handleButtonClick = () => nextButton(".downloadButton");
       break;
     default:
       alert("Not a Valid side navigation");
   }
+
+  let techForm = (
+    <form onSubmit={handleSubmit} className="techForm">
+      <Tech resumeInfo={resumeInfo} setResumeInfo={setResumeInfo} />
+      <button type="submit" onClick={handleButtonClick}>
+        {buttonText}
+      </button>
+    </form>
+  );
 
   if (active === "projects") {
     buttonText = "Download";
@@ -66,7 +81,11 @@ function Form({ active, resumeInfo, setResumeInfo }) {
       <header>{map.get(active)}</header>
       <form onSubmit={handleSubmit}>
         {formContent}
-        {active !== "s&t" && <button type="submit">{buttonText}</button>}
+        {active !== "s&t" && (
+          <button type="submit" onClick={handleButtonClick}>
+            {buttonText}
+          </button>
+        )}
       </form>
       {active === "s&t" && techForm}
     </div>
@@ -75,7 +94,6 @@ function Form({ active, resumeInfo, setResumeInfo }) {
 
 // Rendering to Personal details
 function GeneralInfoForm({ resumeInfo, setResumeInfo }) {
-  console.log(resumeInfo);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setResumeInfo({ ...resumeInfo, [name]: value });
@@ -104,13 +122,14 @@ function GeneralInfoForm({ resumeInfo, setResumeInfo }) {
           value={resumeInfo.email}
           onChange={handleChange}
           placeholder="example@something.com"
+          autoComplete="on"
         />
       </div>
 
       <div className="form-info">
         <label htmlFor="number">Phone Number</label>
         <input
-          type="number"
+          type="tel"
           id="number"
           name="number"
           value={resumeInfo.number}
@@ -127,7 +146,7 @@ function GeneralInfoForm({ resumeInfo, setResumeInfo }) {
           name="linkedInUrl"
           value={resumeInfo.linkedInUrl}
           onChange={handleChange}
-          placeholder="https://url/in/username"
+          placeholder="linkedin.com/in/username"
         />
       </div>
 
@@ -139,7 +158,7 @@ function GeneralInfoForm({ resumeInfo, setResumeInfo }) {
           name="githubUrl"
           value={resumeInfo.githubUrl}
           onChange={handleChange}
-          placeholder="https://github.com/username"
+          placeholder="github.com/username"
         />
       </div>
     </>
@@ -298,8 +317,6 @@ function EducationInfo({ resumeInfo, setResumeInfo }) {
     }));
   };
 
-  console.log(resumeInfo);
-
   return (
     <>
       <div className="form-info">
@@ -364,8 +381,8 @@ function CourseWork({ resumeInfo, setResumeInfo }) {
   const [newInput, setNewInput] = useState("");
   const [error, setError] = useState("");
   const handleButton = () => {
-    if (newInput.trim().length > 25) {
-      setError("Word should be lesser than 25 characters");
+    if (newInput.trim().length > 35) {
+      setError("Word should be lesser than 35 characters");
       return;
     }
     if (newInput.trim()) {
@@ -487,24 +504,26 @@ function Experience({ resumeInfo, setResumeInfo }) {
       <div className="form-info">
         <label htmlFor="startDate">Start date</label>
         <input
-          type="month"
+          type="text"
           id="startDate"
           name="startDate"
           value={employmentInfo.startDate}
           onChange={handleChange}
-          placeholder="May 2022"
+          placeholder="Ex. May 2025"
         />
       </div>
 
       <div className="form-info">
-        <label htmlFor="endDate">End date</label>
+        <label htmlFor="endDate">
+          End date (Leave blank if job hasn't ended)
+        </label>
         <input
-          type="month"
+          type="text"
           id="endDate"
           name="endDate"
           value={employmentInfo.endDate}
           onChange={handleChange}
-          placeholder="May 2022"
+          placeholder="Ex. Aug 2025"
         />
       </div>
 
