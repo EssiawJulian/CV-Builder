@@ -1,6 +1,7 @@
 # Tech Resume Generator
 
 [Visit the site here](https://techresumegen.netlify.app/)
+
 [Video Demo](https://1drv.ms/v/c/b1cac0c6adc9c3a3/Ecnd59J919dJphYAf1_WVsgBG9vwNYyyScC16FMla8EFig?e=uBBK3E)
 
 ## Overview
