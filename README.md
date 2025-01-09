@@ -1,6 +1,7 @@
 # Tech Resume Generator
 
 [Visit the site here](https://techresumegen.netlify.app/)
+[Video Demo](https://1drv.ms/v/c/b1cac0c6adc9c3a3/Ecnd59J919dJphYAf1_WVsgBG9vwNYyyScC16FMla8EFig?e=uBBK3E)
 
 ## Overview
 This project is a web application that enables users to generate professional tech resumes. By entering work experience, skills, education, and other details, users can quickly produce a polished, organized resume. Reducing the time to make and organize a resume by 70%. 
